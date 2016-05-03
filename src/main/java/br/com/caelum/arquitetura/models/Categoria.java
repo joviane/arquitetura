@@ -2,11 +2,15 @@ package br.com.caelum.arquitetura.models;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Categoria {
 
     private String slug;
     private String nome;
+    @JsonProperty("subcategorias")
     private List<SubCategoria> subCategorias;
+    @JsonProperty("numero_cursos")
     private int numeroCursos;
 
     public String getSlug() {

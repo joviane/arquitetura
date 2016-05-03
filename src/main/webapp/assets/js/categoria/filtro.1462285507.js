@@ -1,0 +1,7 @@
+(function(doc){function filtra(event){var id=event.target.getAttribute('for');var value=doc.getElementById(id).value;fazFiltro(value);if(value!="")location.hash=value;else location.hash="";var paineisPlanos=document.querySelectorAll('.painelPlanos');for(var i=0;i<paineisPlanos.length;i++)
+paineisPlanos[i].classList.remove('painelPlanos-invisivel');}
+function fazFiltro(value){for(var i=0;i<subs.length;i++){subs[i].style.opacity=0}
+for(var i=0;i<subs.length;i++){if(value==''||subs[i].getAttribute('data-grupo')==value){subs[i].style.display='block'}else{subs[i].style.display='none'}}
+setTimeout(function(){var subs=doc.querySelectorAll('.subcategoria-wrapper');for(var i=0;i<subs.length;i++){subs[i].style.opacity=1}},250)}
+var labels=doc.querySelectorAll('.subcategoria-filtro-label');var subs=doc.querySelectorAll('.subcategoria-wrapper');for(var i=0;i<labels.length;i++){labels[i].onclick=filtra}
+if(location.hash&&location.hash!=''){var filtro=location.hash.replace('#','');location.hash="";fazFiltro(filtro);location.hash=filtro;document.querySelector('input[type=radio][value='+filtro+']').checked=!0;var paineisPlanos=document.querySelectorAll('.painelPlanos');setTimeout(function(){for(var i=0;i<paineisPlanos.length;i++){paineisPlanos[i].classList.remove('painelPlanos-invisivel')}},1000)}})(document)

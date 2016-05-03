@@ -12,6 +12,9 @@ import br.com.caelum.arquitetura.models.Categoria;
 
 @Controller
 public class HomeController {
+
+    @Autowired
+    private RestTemplate restTemplate;
     
     @RequestMapping("/")
     public String index(Model model) {
@@ -21,7 +24,6 @@ public class HomeController {
 
     private List<Categoria> buscaCategorias() {
 	String url = "https://cursos.alura.com.br/api/categorias";
-	RestTemplate restTemplate = new RestTemplate();
 	List<Categoria> categorias = restTemplate.getForObject(url, List.class);
 	return categorias;
     }
