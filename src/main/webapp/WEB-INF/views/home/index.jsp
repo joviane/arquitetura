@@ -1,3 +1,5 @@
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -69,74 +71,22 @@
 			<a href="/planos-cursos-online" class="buttonLight home-headline-cta">
 				Matricule-se já </a>
 		</div>
+		
+		<!-- CATEGORIAS -->
 		<div class="categoriaCard-lista container">
-			<a href="/cursos-online-mobile"
-				class="categoriaCard-item bg-categoria-mobile"> <svg
-					class="categoriaCard-item-icone">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-mobile" /></svg>
-				<h3 class="categoriaCard-item-nome">
-					<div class="categoriaCard-item-nome-cursos">Cursos de</div>
-					Mobile
-				</h3>
-				<p class="categoriaCard-item-descricao">iOS, Android, PhoneGap,
-					e mais…</p>
-			</a><a href="/cursos-online-programacao"
-				class="categoriaCard-item bg-categoria-programacao"> <svg
-					class="categoriaCard-item-icone">
-					<use
-						xlink:href="/svg,1462285507/categorias#icon-categorias-programacao" /></svg>
-				<h3 class="categoriaCard-item-nome">
-					<div class="categoriaCard-item-nome-cursos">Cursos de</div>
-					Programação
-				</h3>
-				<p class="categoriaCard-item-descricao">Java, C#, Ruby, PHP,
-					Python e mais…</p>
-			</a><a href="/cursos-online-front-end"
-				class="categoriaCard-item bg-categoria-front-end"> <svg
-					class="categoriaCard-item-icone">
-					<use
-						xlink:href="/svg,1462285507/categorias#icon-categorias-front-end" /></svg>
-				<h3 class="categoriaCard-item-nome">
-					<div class="categoriaCard-item-nome-cursos">Cursos de</div>
-					Front-end
-				</h3>
-				<p class="categoriaCard-item-descricao">HTML, CSS, Angular,
-					JavaScript e mais…</p>
-			</a><a href="/cursos-online-infraestrutura"
-				class="categoriaCard-item bg-categoria-infraestrutura"> <svg
-					class="categoriaCard-item-icone">
-					<use
-						xlink:href="/svg,1462285507/categorias#icon-categorias-infraestrutura" /></svg>
-				<h3 class="categoriaCard-item-nome">
-					<div class="categoriaCard-item-nome-cursos">Cursos de</div>
-					Infraestrutura
-				</h3>
-				<p class="categoriaCard-item-descricao">Linux, SQL, Git, Docker
-					e mais…</p>
-			</a><a href="/cursos-online-design-ux"
-				class="categoriaCard-item bg-categoria-design-ux"> <svg
-					class="categoriaCard-item-icone">
-					<use
-						xlink:href="/svg,1462285507/categorias#icon-categorias-design-ux" /></svg>
-				<h3 class="categoriaCard-item-nome">
-					<div class="categoriaCard-item-nome-cursos">Cursos de</div>
-					Design & UX
-				</h3>
-				<p class="categoriaCard-item-descricao">Photoshop, Illustrator,
-					Usabilidade e mais…</p>
-			</a><a href="/cursos-online-business"
-				class="categoriaCard-item bg-categoria-business"> <svg
-					class="categoriaCard-item-icone">
-					<use
-						xlink:href="/svg,1462285507/categorias#icon-categorias-business" /></svg>
-				<h3 class="categoriaCard-item-nome">
-					<div class="categoriaCard-item-nome-cursos">Cursos de</div>
-					Business
-				</h3>
-				<p class="categoriaCard-item-descricao">Agilidade, Startup,
-					Marketing, SEO e mais…</p>
-			</a>
+			<c:forEach var="categoria" items="${categorias}">
+				<a href="/cursos-online-${categoria.slug}" class="categoriaCard-item bg-categoria-${categoria.slug}">
+					<svg class="categoriaCard-item-icone">
+						<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" />
+					</svg>
+					<h3 class="categoriaCard-item-nome">
+						<div class="categoriaCard-item-nome-cursos">Cursos de</div> ${categoria.nome}
+					</h3>
+					<p class="categoriaCard-item-descricao">${categoria.subcategorias[0].nome} e mais…</p>
+				</a>
+			</c:forEach>			
 		</div>
+
 		<div class="home-fundo-container container">
 			<div class="home-fundo-inner-container">
 				<div class="home-fundo-nuvem esquerda"></div>
