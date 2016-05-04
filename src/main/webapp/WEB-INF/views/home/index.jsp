@@ -82,7 +82,7 @@
 					<h3 class="categoriaCard-item-nome">
 						<div class="categoriaCard-item-nome-cursos">Cursos de</div> ${categoria.nome}
 					</h3>
-					<p class="categoriaCard-item-descricao">${categoria.subcategorias[0].nome} e mais…</p>
+					<p class="categoriaCard-item-descricao">${categoria.descricao} e mais…</p>
 				</a>
 			</c:forEach>			
 		</div>

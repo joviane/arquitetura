@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport"
 	content="width=device-width,initial-scale=1,minimum-scale=1.0">
-<title>Cursos Online de Mobile | Alura</title>
+<title>Cursos Online de ${categoria.nome} | Alura</title>
 <meta name="description"
 	content="No Alura, você tem os melhores cursos de tecnologia. Incluindo iOS, Android, PhoneGap, e mais…">
 <meta property="og:description"
@@ -106,46 +106,33 @@
 			</nav>
 		</div>
 	</header>
-	<div class="categoria-banner bg-categoria-mobile">
+	<div class="categoria-banner bg-categoria-${categoria.slug}">
 		<div class="container">
 			<div class="categoria-banner-icone">
 				<svg class="categoria-banner-icone-principal">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-mobile" /></svg>
+					<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
 				<svg class="categoria-banner-icone-secundario">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-mobile" /></svg>
+					<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
 				<svg class="categoria-banner-icone-secundario">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-mobile" /></svg>
+					<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
 				<svg class="categoria-banner-icone-secundario">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-mobile" /></svg>
+					<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
 			</div>
 			<div class="categoria-banner-conteudo">
 				<h1 class="categoria-banner-titulo">
-					Cursos online de <strong>Mobile</strong>
+					Cursos online de <strong>${categoria.nome}</strong>
 				</h1>
 				<p class="subcategoria-filtro-titulo">Quais cursos quer ver?</p>
 				<ul class="subcategoria-filtro">
-					<li class="subcategoria-filtro-item"><input type="radio"
-						name="subcategoria-filtro" value="" id="subcategoria-filtro-"
-						checked> <label class="subcategoria-filtro-label"
-						for="subcategoria-filtro-">Todos cursos</label>
-					<li class="subcategoria-filtro-item"><input type="radio"
-						name="subcategoria-filtro" value="ios"
-						id="subcategoria-filtro-ios"> <label
-						class="subcategoria-filtro-label" for="subcategoria-filtro-ios">iOS</label>
-					<li class="subcategoria-filtro-item"><input type="radio"
-						name="subcategoria-filtro" value="android"
-						id="subcategoria-filtro-android"> <label
-						class="subcategoria-filtro-label"
-						for="subcategoria-filtro-android">Android</label>
-					<li class="subcategoria-filtro-item"><input type="radio"
-						name="subcategoria-filtro" value="multiplataforma"
-						id="subcategoria-filtro-multiplataforma"> <label
-						class="subcategoria-filtro-label"
-						for="subcategoria-filtro-multiplataforma">Multiplataforma</label>
-					<li class="subcategoria-filtro-item"><input type="radio"
-						name="subcategoria-filtro" value="jogos"
-						id="subcategoria-filtro-jogos"> <label
-						class="subcategoria-filtro-label" for="subcategoria-filtro-jogos">Jogos</label>
+					<li class="subcategoria-filtro-item">
+						<input type="radio" name="subcategoria-filtro" value="" id="subcategoria-filtro-" checked>
+						<label class="subcategoria-filtro-label" for="subcategoria-filtro-">Todos cursos</label>
+					
+					<c:forEach var="subCategoria" items="${categoria.subCategorias}">
+						<li class="subcategoria-filtro-item">
+							<input type="radio" name="subcategoria-filtro" value="ios" id="subcategoria-filtro-${subCategoria.slug}">
+							<label class="subcategoria-filtro-label" for="subcategoria-filtro-${subCategoria.slug}">${subCategoria.nome}</label>
+					</c:forEach>
 				</ul>
 			</div>
 		</div>
