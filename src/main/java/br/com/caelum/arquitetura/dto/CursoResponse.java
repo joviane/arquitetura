@@ -1,8 +1,8 @@
-package br.com.caelum.arquitetura.models;
+package br.com.caelum.arquitetura.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Curso {
+public class CursoResponse {
 
     private Integer id;
     private String slug;
