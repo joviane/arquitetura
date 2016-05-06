@@ -11,9 +11,10 @@ public class Boot {
     public static void main(String[] args) {
 	SpringApplication.run(Boot.class, args);
     }
-    
+
     @Bean
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
 	return new RestTemplate();
     }
+
 }
