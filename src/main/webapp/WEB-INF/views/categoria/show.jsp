@@ -1,5 +1,9 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<c:url value="https://www.alura.com.br" var="url"/>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -23,9 +27,9 @@
 <meta name="referrer" content="unsafe-url">
 <meta name="theme-color" content="#fbcf36">
 <link rel="stylesheet"
-	href="/bundle,reset,base,colors,font,block/buttons,block/categoriaCard,block/conteudo,block/cursoCard,block/depoimentos,block/elasticMedia,block/footer-listaCursos,block/footer,block/form-erro,block/grupoCaelum,block/header-busca,block/header,block/highlighted,block/painelPlanos,block/titulo-destaque,block/titulos.1462285507.css">
+	href="${url}/bundle,reset,base,colors,font,block/buttons,block/categoriaCard,block/conteudo,block/cursoCard,block/depoimentos,block/elasticMedia,block/footer-listaCursos,block/footer,block/form-erro,block/grupoCaelum,block/header-busca,block/header,block/highlighted,block/painelPlanos,block/titulo-destaque,block/titulos.1462285507.css">
 <link rel="stylesheet"
-	href="/bundle,categoria/banner,categoria/filtro,categoria/subcategorias.1462285507.css">
+	href="${url}/bundle,categoria/banner,categoria/filtro,categoria/subcategorias.1462285507.css">
 <link rel="canonical"
 	href="https://www.alura.com.br/cursos-online-mobile" />
 <script type="application/ld+json">{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.alura.com.br/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.alura.com.br/cursos-online-mobile","name":"Cursos Online de Mobile"}}]}</script>
@@ -43,8 +47,8 @@
 			</div>
 		</section>
 		<div class="container">
-			<a href="/" class="header-logo"> <img
-				src="/assets/img/alura-logo.1462285507.svg" alt="Alura">
+			<a href="${url}/" class="header-logo"> <img
+				src="${url}/assets/img/alura-logo.1462285507.svg" alt="Alura">
 			</a>
 			<div class="header-navegacao">
 				<form action="/busca" class="header-navegacao-form">
@@ -52,12 +56,12 @@
 						placeholder="Digite sua busca aqui" name="q">
 					<button class="navegacao-form-submit" type="submit">
 						<svg class="header-busca-icone">
-							<use xlink:href="/svg,1462285507/header#icon-header-busca" /></svg>
+							<use xlink:href="${url}/svg,1462285507/header#icon-header-busca" /></svg>
 					</button>
 				</form>
 				<a href="/busca" class="header-busca"> <svg
 						class="header-busca-icone">
-						<use xlink:href="/svg,1462285507/header#icon-header-busca" /></svg>
+						<use xlink:href="${url}/svg,1462285507/header#icon-header-busca" /></svg>
 				</a><a href="/dashboard" class="header-areaAluno"> Login </a><a
 					href="/planos-cursos-online" class="header-cta"> Matricule-se </a>
 			</div>
@@ -68,39 +72,39 @@
 						href="/cursos-online-mobile" class="unlinkify"> <svg
 								class="header-categoria-icone">
 								<use
-									xlink:href="/svg,1462285507/categorias#icon-categorias-mobile" /></svg>Mobile
+									xlink:href="${url}/svg,1462285507/categorias#icon-categorias-mobile" /></svg>Mobile
 					</a></li>
 					<li class="header-menu-categoria fg-categoria-programacao"><a
 						href="/cursos-online-programacao" class="unlinkify"> <svg
 								class="header-categoria-icone">
 								<use
-									xlink:href="/svg,1462285507/categorias#icon-categorias-programacao" /></svg>Programação
+									xlink:href="${url}/svg,1462285507/categorias#icon-categorias-programacao" /></svg>Programação
 					</a></li>
 					<li class="header-menu-categoria fg-categoria-front-end"><a
 						href="/cursos-online-front-end" class="unlinkify"> <svg
 								class="header-categoria-icone">
 								<use
-									xlink:href="/svg,1462285507/categorias#icon-categorias-front-end" /></svg>Front-end
+									xlink:href="${url}/svg,1462285507/categorias#icon-categorias-front-end" /></svg>Front-end
 					</a></li>
 					<li class="header-menu-categoria fg-categoria-infraestrutura">
 						<a href="/cursos-online-infraestrutura" class="unlinkify"> <svg
 								class="header-categoria-icone">
 								<use
-									xlink:href="/svg,1462285507/categorias#icon-categorias-infraestrutura" /></svg>Infraestrutura
+									xlink:href="${url}/svg,1462285507/categorias#icon-categorias-infraestrutura" /></svg>Infraestrutura
 					</a>
 					</li>
 					<li class="header-menu-categoria fg-categoria-design-ux"><a
 						href="/cursos-online-design-ux" class="unlinkify"> <svg
 								class="header-categoria-icone">
 								<use
-									xlink:href="/svg,1462285507/categorias#icon-categorias-design-ux" /></svg>Design
+									xlink:href="${url}/svg,1462285507/categorias#icon-categorias-design-ux" /></svg>Design
 							& UX
 					</a></li>
 					<li class="header-menu-categoria fg-categoria-business"><a
 						href="/cursos-online-business" class="unlinkify"> <svg
 								class="header-categoria-icone">
 								<use
-									xlink:href="/svg,1462285507/categorias#icon-categorias-business" /></svg>Business
+									xlink:href="${url}/svg,1462285507/categorias#icon-categorias-business" /></svg>Business
 					</a></li>
 				</ul>
 			</nav>
@@ -110,13 +114,13 @@
 		<div class="container">
 			<div class="categoria-banner-icone">
 				<svg class="categoria-banner-icone-principal">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
+					<use xlink:href="${url}/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
 				<svg class="categoria-banner-icone-secundario">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
+					<use xlink:href="${url}/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
 				<svg class="categoria-banner-icone-secundario">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
+					<use xlink:href="${url}/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
 				<svg class="categoria-banner-icone-secundario">
-					<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
+					<use xlink:href="${url}/svg,1462285507/categorias#icon-categorias-${categoria.slug}" /></svg>
 			</div>
 			<div class="categoria-banner-conteudo">
 				<h1 class="categoria-banner-titulo">
@@ -130,7 +134,7 @@
 					
 					<c:forEach var="subCategoria" items="${categoria.subCategorias}">
 						<li class="subcategoria-filtro-item">
-							<input type="radio" name="subcategoria-filtro" value="ios" id="subcategoria-filtro-${subCategoria.slug}">
+							<input type="radio" name="subcategoria-filtro" value="${subCategoria.slug}" id="subcategoria-filtro-${subCategoria.slug}">
 							<label class="subcategoria-filtro-label" for="subcategoria-filtro-${subCategoria.slug}">${subCategoria.nome}</label>
 					</c:forEach>
 				</ul>
@@ -149,7 +153,7 @@
 				<div class="cursoCard-lista container">
 					<a class="cursoCard" href="/curso-online-${curso.slug}">
 						<div class="cursoCard-firstRow">
-							<img src="/assets/api/cursos/${curso.slug}.svg" alt="${curso.nome}" class="cursoCard-icone">
+							<img src="${url}/assets/api/cursos/${curso.slug}.svg" alt="${curso.nome}" class="cursoCard-icone">
 							<div class="cursoCard-nome">${curso.nome}</div>
 						</div>
 						<div class="cursoCard-infos">
@@ -177,7 +181,7 @@
 						<span class="painelPlanos-plano-preco"> <span
 							class="painelPlanos-plano-preco-parcelas"> 12x </span> R$ 75
 						</span> <span class="painelPlanos-plano-precoTotal"> (à vista R$
-							900) </span> <a href="/compra?p=premium"
+							900) </span> <a href="/compra?tipoPlano=PREMIUM"
 							class="painelPlanos-plano-botaoComprar" nofollow>
 							Matricule-se </a>
 					</div>
@@ -188,20 +192,20 @@
 								class="painelPlanos-info-numero">7.762</div> <span>Exercícios</span></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
 </svg>
 							<div class="painelPlanos-info-texto">Estude por 1 ano</div></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
 <use
-									xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-unchecked" />
+									xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-unchecked" />
 </svg>
 							<div class="painelPlanos-info-texto">3 ebooks da Casa do
 								Código</div></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
 <use
-									xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-unchecked" />
+									xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-unchecked" />
 </svg>
 							<div class="painelPlanos-info-texto">Curso de inglês no
 								Galandra</div></li>
@@ -215,7 +219,7 @@
 						<span class="painelPlanos-plano-preco"> <span
 							class="painelPlanos-plano-preco-parcelas"> 12x </span> R$ 100
 						</span> <span class="painelPlanos-plano-precoTotal"> (à vista R$
-							1.200) </span> <a href="/compra?p=premiumplus"
+							1.200) </span> <a href="/compra?tipoPlano=PREMIUMPLUS"
 							class="painelPlanos-plano-botaoComprar" nofollow>
 							Matricule-se </a>
 					</div>
@@ -226,18 +230,18 @@
 								class="painelPlanos-info-numero">7.762</div> <span>Exercícios</span></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
 </svg>
 							<div class="painelPlanos-info-texto">Estude por 1 ano</div></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
 </svg>
 							<div class="painelPlanos-info-texto">3 ebooks da Casa do
 								Código</div></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
 </svg>
 							<div class="painelPlanos-info-texto">Curso de inglês no
 								Galandra</div></li>
@@ -247,26 +251,26 @@
 			<div class="painelPlanos-vantagens">
 				<div class="painelPlanos-vantagem">
 					<svg class="painelPlanos-vantagem-icon">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-acesso" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-acesso" />
 </svg>
 					Acesso por 1 ano
 				</div>
 				<div class="painelPlanos-vantagem">
 					<svg class="painelPlanos-vantagem-icon">
 <use
-							xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-certificado" />
+							xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-certificado" />
 </svg>
 					Certificado digital de conclusão
 				</div>
 				<div class="painelPlanos-vantagem">
 					<svg class="painelPlanos-vantagem-icon i24h">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-24h" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-24h" />
 </svg>
 					Estude 24h/dia onde e quando quiser
 				</div>
 				<div class="painelPlanos-vantagem">
 					<svg class="painelPlanos-vantagem-icon">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-cursos" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-cursos" />
 </svg>
 					Novos cursos todos os meses
 				</div>
@@ -275,28 +279,28 @@
 		<div class="painelPlanos-footer">
 			<svg class="painelPlanos-onda" preserveAspectRatio="none">
 <use
-					xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-background-onda" />
+					xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-background-onda" />
 </svg>
 			<div class="container">
 				<ul class="painelPlanos-footer-list">
 					<li class="painelPlanos-footer-item painelPlanos-footer-item-curso">
 						<svg class="painelPlanos-footer-item-curso-icone">
 <use
-								xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-icon-cursos" />
+								xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-icon-cursos" />
 </svg>
 						<h3>220</h3> <span>cursos</span>
 					</li>
 					<li class="painelPlanos-footer-item painelPlanos-footer-item-aula">
 						<svg class="painelPlanos-footer-item-curso-icone">
 <use
-								xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-icon-aulas" />
+								xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-icon-aulas" />
 </svg>
 						<h3>1.662</h3> <span>aulas</span>
 					</li>
 					<li class="painelPlanos-footer-item painelPlanos-footer-item-exerc">
 						<svg class="painelPlanos-footer-item-curso-icone">
 <use
-								xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-icon-exercicios" />
+								xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-icon-exercicios" />
 </svg>
 						<h3>7.762</h3> <span>exercícios</span>
 					</li>
@@ -308,11 +312,11 @@
 		<div class="container">
 			<div class="footer-logos">
 				<a class="footer-logos-home" href="/"> <img
-					src="/assets/img/alura-logo.1462285507.svg" alt="Alura"
+					src="${url}/assets/img/alura-logo.1462285507.svg" alt="Alura"
 					class="footer-logo">
 				</a> <a href="http://www.caelum.com.br/" class="footer-link-caelum"><h3
 						class="footer-powered-by">Powered by</h3> <img
-					src="/assets/img/footer/caelum-logo.1462285507.svg" alt="Caelum"
+					src="${url}/assets/img/footer/caelum-logo.1462285507.svg" alt="Caelum"
 					class="footer-logo footer-caelumLogo"> </a>
 			</div>
 			<div class="footer-navegue">
@@ -356,11 +360,11 @@
 					<h2 class="footer-parceiros-titulo">Parceiros</h2>
 					<a class="footer-parceiros-galandra"
 						href="http://www.galandra.com.br/"> <img
-						src="/assets/img/footer/galandra-cinza-logo.1462285507.svg"
+						src="${url}/assets/img/footer/galandra-cinza-logo.1462285507.svg"
 						alt="Galandra" class="footer-parceiros-imagem">
 					</a> <a class="footer-parceiros-cdc"
 						href="http://www.casadocodigo.com.br/"> <img
-						src="/assets/img/footer/cdc-cinza-logo.1462285507.svg"
+						src="${url}/assets/img/footer/cdc-cinza-logo.1462285507.svg"
 						alt="Casa do Código" class="footer-parceiros-imagem">
 					</a>
 				</div>
@@ -535,24 +539,24 @@
 			<ul class="grupoCaelum-list">
 				<li><a href="http://www.caelum.com.br"><img alt="Caelum"
 						class="grupoCaelum-Caelumlogo"
-						src="/assets/img/footer/caelum-logo.1462285507.svg"></a></li>
+						src="${url}/assets/img/footer/caelum-logo.1462285507.svg"></a></li>
 				<li><a href="http://www.alura.com.br"><img alt="Alura"
 						class="grupoCaelum-Aluralogo"
-						src="/assets/img/alura-logo.1462285507.svg"></a></li>
+						src="${url}/assets/img/alura-logo.1462285507.svg"></a></li>
 				<li><a href="http://www.casadocodigo.com.br"><img
 						class="grupoCaelum-CDClogo" alt="Casa do Código"
-						src="/assets/img/footer/cdc-logo.1462285507.svg"></a></li>
+						src="${url}/assets/img/footer/cdc-logo.1462285507.svg"></a></li>
 				<li><a href="http://www.guj.com.br"><img alt="GUJ"
 						class="grupoCaelum-GUJlogo"
-						src="/assets/img/footer/guj-logo.1462285507.svg"></a></li>
+						src="${url}/assets/img/footer/guj-logo.1462285507.svg"></a></li>
 			</ul>
 		</div>
 	</div>
-	<script src="/assets/js/lib/svg4everybody.min.1462285507.js" async></script>
-	<script src="/assets/js/header/menu.1462285507.js" async></script>
-	<script src="/assets/js/header/busca.1462285507.js" async></script>
-	<script src="/assets/js/detect.1462285507.js" async></script>
-	<script src="/assets/js/video.1462285507.js" async></script>
+	<script src="${url}/assets/js/lib/svg4everybody.min.1462285507.js" async></script>
+	<script src="${url}/assets/js/header/menu.1462285507.js" async></script>
+	<script src="${url}/assets/js/header/busca.1462285507.js" async></script>
+	<script src="${url}/assets/js/detect.1462285507.js" async></script>
+	<script src="${url}/assets/js/video.1462285507.js" async></script>
 	<script>
 		var userId = (document.cookie.match('alura.userId=([^;]+)') || [ null,
 				null ])[1];
@@ -581,8 +585,8 @@
 		ga('tracker1.send', 'pageview');
 	</script>
 	<script async src='//www.google-analytics.com/analytics.js'></script>
-	<script src="/bundle,lib/hunt.min,painelPlanos.1462285507.js" async></script>
-	<script src="/assets/js/footer/footer.1462285507.js" async></script>
+	<script src="${url}/bundle,lib/hunt.min,painelPlanos.1462285507.js" async></script>
+	<script src="${url}/assets/js/footer/footer.1462285507.js" async></script>
 	<script type="text/javascript"
 		src="https://static.criteo.net/js/ld/ld.js" async></script>
 	<script type="text/javascript">
@@ -604,6 +608,6 @@
 		};
 		criteoPush("viewList", "[173,199,197]");
 	</script>
-	<script src="/assets/js/categoria/filtro.1462285507.js" async></script>
+	<script src="${url}/assets/js/categoria/filtro.1462285507.js" async></script>
 </body>
 </html>
