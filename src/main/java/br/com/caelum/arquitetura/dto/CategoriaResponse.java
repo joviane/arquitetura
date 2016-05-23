@@ -1,11 +1,17 @@
 package br.com.caelum.arquitetura.dto;
 
+import java.io.Serializable;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class CategoriaResponse {
+public class CategoriaResponse implements Serializable {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    
     private String slug;
     private String nome;
     @JsonProperty("subcategorias")

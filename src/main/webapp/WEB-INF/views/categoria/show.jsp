@@ -47,7 +47,7 @@
 			</div>
 		</section>
 		<div class="container">
-			<a href="${url}/" class="header-logo"> <img
+			<a href="/" class="header-logo"> <img
 				src="${url}/assets/img/alura-logo.1462285507.svg" alt="Alura">
 			</a>
 			<div class="header-navegacao">

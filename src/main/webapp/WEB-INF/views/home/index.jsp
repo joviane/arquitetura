@@ -58,11 +58,11 @@
 								<use xlink:href="${url}/svg,1462285507/header#icon-header-busca" /></svg>
 						</button>
 					</form>
-					<a href="${url}/busca" class="header-busca"> <svg
+					<a href="/busca" class="header-busca"> <svg
 							class="header-busca-icone">
 							<use xlink:href="${url}/svg,1462285507/header#icon-header-busca" /></svg>
-					</a><a href="${url}/dashboard" class="header-areaAluno"> Login </a><a
-						href="${url}/planos-cursos-online" class="header-cta"> Matricule-se
+					</a><a href="/dashboard" class="header-areaAluno"> Login </a><a
+						href="/planos-cursos-online" class="header-cta"> Matricule-se
 					</a>
 				</div>
 				<nav class="header-menu"></nav>
