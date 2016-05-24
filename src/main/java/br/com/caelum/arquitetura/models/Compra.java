@@ -20,8 +20,13 @@ public class Compra {
     @Temporal(TemporalType.DATE)
     private Calendar dataDaCompra;
 
+    @Deprecated
     public Compra(){
+    }
+
+    public Compra(BigDecimal valor){
 	dataDaCompra = Calendar.getInstance();
+	this.valor = valor;
     }
     
     public Integer getId() {

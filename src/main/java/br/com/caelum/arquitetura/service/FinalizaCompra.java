@@ -15,8 +15,7 @@ public class FinalizaCompra {
 
     @Transactional
     public void finaliza(TipoPlano tipoPlano) {
-	Compra compra = new Compra();
-	compra.setValor(tipoPlano.getValue());
+	Compra compra = new Compra(tipoPlano.getValue());
 	dao.adiciona(compra);
     }
 
