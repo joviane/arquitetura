@@ -9,12 +9,6 @@
 <title></title>
 </head>
 <body>
-	Ocorreu um erro inesperado! -> ${exception.message}
-	
-	<!-- 
-	<c:forEach var="element" items="${exception.stackTrace}">
-		${element}
-	</c:forEach>
-	 -->
+	Ocorreu um erro inesperado! ${exception.printStackTrace()}
 </body>
 </html>

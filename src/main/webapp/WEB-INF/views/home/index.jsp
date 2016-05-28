@@ -1,5 +1,9 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+<c:url value="https://www.alura.com.br" var="url"/>
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -22,9 +26,9 @@
 <meta name="referrer" content="unsafe-url">
 <meta name="theme-color" content="#fbcf36">
 <link rel="stylesheet"
-	href="/bundle,reset,base,colors,font,block/buttons,block/categoriaCard,block/conteudo,block/cursoCard,block/depoimentos,block/elasticMedia,block/footer-listaCursos,block/footer,block/form-erro,block/grupoCaelum,block/header-busca,block/header,block/highlighted,block/painelPlanos,block/titulo-destaque,block/titulos.1462285507.css">
+	href="${url}/bundle,reset,base,colors,font,block/buttons,block/categoriaCard,block/conteudo,block/cursoCard,block/depoimentos,block/elasticMedia,block/footer-listaCursos,block/footer,block/form-erro,block/grupoCaelum,block/header-busca,block/header,block/highlighted,block/painelPlanos,block/titulo-destaque,block/titulos.1462285507.css">
 <link rel="stylesheet"
-	href="/bundle,home/aprenda,home/diferenciais,home/fundo,home/home.1462285507.css">
+	href="${url}/bundle,home/aprenda,home/diferenciais,home/fundo,home/home.1462285507.css">
 <link rel="canonical" href="https://www.alura.com.br/" />
 <script type="application/ld+json">{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.alura.com.br/","name":"Home"}}]}</script>
 </head>
@@ -43,7 +47,7 @@
 			</section>
 			<div class="container">
 				<div class="header-logo">
-					<img src="/assets/img/alura-logo.1462285507.svg" alt="Alura">
+					<img src="${url}/assets/img/alura-logo.1462285507.svg" alt="Alura">
 				</div>
 				<div class="header-navegacao">
 					<form action="/busca" class="header-navegacao-form">
@@ -51,12 +55,12 @@
 							placeholder="Digite sua busca aqui" name="q">
 						<button class="navegacao-form-submit" type="submit">
 							<svg class="header-busca-icone">
-								<use xlink:href="/svg,1462285507/header#icon-header-busca" /></svg>
+								<use xlink:href="${url}/svg,1462285507/header#icon-header-busca" /></svg>
 						</button>
 					</form>
 					<a href="/busca" class="header-busca"> <svg
 							class="header-busca-icone">
-							<use xlink:href="/svg,1462285507/header#icon-header-busca" /></svg>
+							<use xlink:href="${url}/svg,1462285507/header#icon-header-busca" /></svg>
 					</a><a href="/dashboard" class="header-areaAluno"> Login </a><a
 						href="/planos-cursos-online" class="header-cta"> Matricule-se
 					</a>
@@ -77,7 +81,7 @@
 			<c:forEach var="categoria" items="${categorias}">
 				<a href="/cursos-online-${categoria.slug}" class="categoriaCard-item bg-categoria-${categoria.slug}">
 					<svg class="categoriaCard-item-icone">
-						<use xlink:href="/svg,1462285507/categorias#icon-categorias-${categoria.slug}" />
+						<use xlink:href="${url}/svg,1462285507/categorias#icon-categorias-${categoria.slug}" />
 					</svg>
 					<h3 class="categoriaCard-item-nome">
 						<div class="categoriaCard-item-nome-cursos">Cursos de</div> ${categoria.nome}
@@ -213,7 +217,7 @@
 		<div class="container">
 			<h2 class="highlighted-title">Esses e muitos outros alunos
 				conheceram e recomendaram. Invista na sua carreira também!</h2>
-			<a class="buttonLight highlighted-link" href="/planos-cursos-online">
+			<a class="buttonLight highlighted-link" href="${url}/planos-cursos-online">
 				Matricule-se já </a>
 		</div>
 	</div>
@@ -221,9 +225,9 @@
 		<h2 class="home-cursos-titulo container">Nossos últimos
 			lançamentos</h2>
 		<div class="cursoCard-lista container">
-			<a class="cursoCard" href="/curso-online-linux-essentials-1"><div
+			<a class="cursoCard" href="${url}/curso-online-linux-essentials-1"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/linux-essentials-1.svg"
+					<img src="${url}/assets/api/cursos/linux-essentials-1.svg"
 						alt="Certificação LPI Linux Essentials 1: Evolution and Distributions"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">Certificação LPI Linux Essentials
@@ -239,7 +243,7 @@
 				</div> </a><a class="cursoCard"
 				href="/curso-online-machine-learning-classificacao-ii"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/machine-learning-classificacao-ii.svg"
+					<img src="${url}/assets/api/cursos/machine-learning-classificacao-ii.svg"
 						alt="Machine Learning II: Avançando com tipos diferentes de classificação"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">Machine Learning II: Avançando
@@ -254,7 +258,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-certificacao-oracle"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/certificacao-oracle.svg"
+					<img src="${url}/assets/api/cursos/certificacao-oracle.svg"
 						alt="Certificação Oracle SQL Fundamentals I : Introduction to Oracle"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">Certificação Oracle SQL
@@ -269,7 +273,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-facebook-marketing"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/facebook-marketing.svg"
+					<img src="${url}/assets/api/cursos/facebook-marketing.svg"
 						alt="Facebook Marketing: Como impulsionar a sua marca através de uma Fanpage"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">Facebook Marketing: Como
@@ -286,7 +290,7 @@
 				href="/curso-online-wordpress-paginas-temas-boas-praticas"><div
 					class="cursoCard-firstRow">
 					<img
-						src="/assets/api/cursos/wordpress-paginas-temas-boas-praticas.svg"
+						src="${url}/assets/api/cursos/wordpress-paginas-temas-boas-praticas.svg"
 						alt=" WordPress II: páginas, temas e boas práticas"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">WordPress II: páginas, temas e
@@ -303,7 +307,7 @@
 				href="/curso-online-wordpress-hospedagem-administracao-widgets"><div
 					class="cursoCard-firstRow">
 					<img
-						src="/assets/api/cursos/wordpress-hospedagem-administracao-widgets.svg"
+						src="${url}/assets/api/cursos/wordpress-hospedagem-administracao-widgets.svg"
 						alt="WordPress I: hospedagem, administração e widgets"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">WordPress I: hospedagem,
@@ -318,7 +322,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-entity-framework"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/entity-framework.svg"
+					<img src="${url}/assets/api/cursos/entity-framework.svg"
 						alt="Entity Framework: Banco de dados de forma eficiente"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">Entity Framework: Banco de dados
@@ -333,7 +337,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-maven-build-do-zero-a-web"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/maven-build-do-zero-a-web.svg"
+					<img src="${url}/assets/api/cursos/maven-build-do-zero-a-web.svg"
 						alt="Maven: Build do zero a web" class="cursoCard-icone">
 					<div class="cursoCard-nome">Maven: Build do zero a web</div>
 				</div>
@@ -350,7 +354,7 @@
 		<div class="cursoCard-lista container">
 			<a class="cursoCard" href="/curso-online-logica-de-programacao"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/logica-de-programacao.svg"
+					<img src="${url}/assets/api/cursos/logica-de-programacao.svg"
 						alt="Lógica de Programação I: comece na carreira com JavaScript"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">Lógica de Programação I: comece
@@ -365,7 +369,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-primeiros-passos-com-java"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/primeiros-passos-com-java.svg"
+					<img src="${url}/assets/api/cursos/primeiros-passos-com-java.svg"
 						alt="Java I: Primeiros passos" class="cursoCard-icone">
 					<div class="cursoCard-nome">Java I: Primeiros passos</div>
 				</div>
@@ -378,7 +382,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-introducao-html-css"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/introducao-html-css.svg"
+					<img src="${url}/assets/api/cursos/introducao-html-css.svg"
 						alt="HTML5 e CSS3 I: Suas primeiras páginas da Web"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">HTML5 e CSS3 I: Suas primeiras
@@ -393,7 +397,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-fundamentos-http"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/fundamentos-http.svg"
+					<img src="${url}/assets/api/cursos/fundamentos-http.svg"
 						alt="HTTP: Entendendo a web por baixo dos panos"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">HTTP: Entendendo a web por baixo
@@ -408,7 +412,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-html-e-css"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/html-e-css.svg"
+					<img src="${url}/assets/api/cursos/html-e-css.svg"
 						alt="HTML e CSS: Os seus primeiros passos" class="cursoCard-icone">
 					<div class="cursoCard-nome">HTML e CSS: Os seus primeiros
 						passos</div>
@@ -422,7 +426,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-angularjs-mvc"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/angularjs-mvc.svg"
+					<img src="${url}/assets/api/cursos/angularjs-mvc.svg"
 						alt="AngularJS: crie webapps poderosas" class="cursoCard-icone">
 					<div class="cursoCard-nome">AngularJS: crie webapps poderosas</div>
 				</div>
@@ -435,7 +439,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-ingles-para-entrevistas"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/ingles-para-entrevistas.svg"
+					<img src="${url}/assets/api/cursos/ingles-para-entrevistas.svg"
 						alt="Inglês: Candidate-se a vagas no exterior"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">Inglês: Candidate-se a vagas no
@@ -450,7 +454,7 @@
 					<div class="cursoCard-infos-mais">+</div>
 				</div> </a><a class="cursoCard" href="/curso-online-a-linguagem-javascript"><div
 					class="cursoCard-firstRow">
-					<img src="/assets/api/cursos/a-linguagem-javascript.svg"
+					<img src="${url}/assets/api/cursos/a-linguagem-javascript.svg"
 						alt="JavaScript: Programando na linguagem da web"
 						class="cursoCard-icone">
 					<div class="cursoCard-nome">JavaScript: Programando na
@@ -493,7 +497,7 @@
 						<span class="painelPlanos-plano-preco"> <span
 							class="painelPlanos-plano-preco-parcelas"> 12x </span> R$ 75
 						</span> <span class="painelPlanos-plano-precoTotal"> (à vista R$
-							900) </span> <a href="/compra?p=premium"
+							900) </span> <a href="/compra?tipoPlano=PREMIUM"
 							class="painelPlanos-plano-botaoComprar" nofollow>
 							Matricule-se </a>
 					</div>
@@ -504,20 +508,20 @@
 								class="painelPlanos-info-numero">7.670</div> <span>Exercícios</span></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
 </svg>
 							<div class="painelPlanos-info-texto">Estude por 1 ano</div></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
 <use
-									xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-unchecked" />
+									xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-unchecked" />
 </svg>
 							<div class="painelPlanos-info-texto">3 ebooks da Casa do
 								Código</div></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
 <use
-									xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-unchecked" />
+									xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-unchecked" />
 </svg>
 							<div class="painelPlanos-info-texto">Curso de inglês no
 								Galandra</div></li>
@@ -531,7 +535,7 @@
 						<span class="painelPlanos-plano-preco"> <span
 							class="painelPlanos-plano-preco-parcelas"> 12x </span> R$ 100
 						</span> <span class="painelPlanos-plano-precoTotal"> (à vista R$
-							1.200) </span> <a href="/compra?p=premiumplus"
+							1.200) </span> <a href="/compra?tipoPlano=PREMIUM_PLUS"
 							class="painelPlanos-plano-botaoComprar" nofollow>
 							Matricule-se </a>
 					</div>
@@ -542,18 +546,18 @@
 								class="painelPlanos-info-numero">7.670</div> <span>Exercícios</span></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
 </svg>
 							<div class="painelPlanos-info-texto">Estude por 1 ano</div></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
 </svg>
 							<div class="painelPlanos-info-texto">3 ebooks da Casa do
 								Código</div></li>
 						<li class="painelPlanos-info-item"><svg
 								class="painelPlanos-info-check">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-checked" />
 </svg>
 							<div class="painelPlanos-info-texto">Curso de inglês no
 								Galandra</div></li>
@@ -563,26 +567,26 @@
 			<div class="painelPlanos-vantagens">
 				<div class="painelPlanos-vantagem">
 					<svg class="painelPlanos-vantagem-icon">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-acesso" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-acesso" />
 </svg>
 					Acesso por 1 ano
 				</div>
 				<div class="painelPlanos-vantagem">
 					<svg class="painelPlanos-vantagem-icon">
 <use
-							xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-certificado" />
+							xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-certificado" />
 </svg>
 					Certificado digital de conclusão
 				</div>
 				<div class="painelPlanos-vantagem">
 					<svg class="painelPlanos-vantagem-icon i24h">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-24h" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-24h" />
 </svg>
 					Estude 24h/dia onde e quando quiser
 				</div>
 				<div class="painelPlanos-vantagem">
 					<svg class="painelPlanos-vantagem-icon">
-<use xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-cursos" />
+<use xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-cursos" />
 </svg>
 					Novos cursos todos os meses
 				</div>
@@ -591,28 +595,28 @@
 		<div class="painelPlanos-footer">
 			<svg class="painelPlanos-onda" preserveAspectRatio="none">
 <use
-					xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-background-onda" />
+					xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-background-onda" />
 </svg>
 			<div class="container">
 				<ul class="painelPlanos-footer-list">
 					<li class="painelPlanos-footer-item painelPlanos-footer-item-curso">
 						<svg class="painelPlanos-footer-item-curso-icone">
 <use
-								xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-icon-cursos" />
+								xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-icon-cursos" />
 </svg>
 						<h3>218</h3> <span>cursos</span>
 					</li>
 					<li class="painelPlanos-footer-item painelPlanos-footer-item-aula">
 						<svg class="painelPlanos-footer-item-curso-icone">
 <use
-								xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-icon-aulas" />
+								xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-icon-aulas" />
 </svg>
 						<h3>1.643</h3> <span>aulas</span>
 					</li>
 					<li class="painelPlanos-footer-item painelPlanos-footer-item-exerc">
 						<svg class="painelPlanos-footer-item-curso-icone">
 <use
-								xlink:href="/svg,1462285507/painelPlanos#icon-painelPlanos-icon-exercicios" />
+								xlink:href="${url}/svg,1462285507/painelPlanos#icon-painelPlanos-icon-exercicios" />
 </svg>
 						<h3>7.670</h3> <span>exercícios</span>
 					</li>
@@ -629,11 +633,11 @@
 		<div class="container">
 			<div class="footer-logos">
 				<a class="footer-logos-home" href="/"> <img
-					src="/assets/img/alura-logo.1462285507.svg" alt="Alura"
+					src="${url}/assets/img/alura-logo.1462285507.svg" alt="Alura"
 					class="footer-logo">
 				</a> <a href="http://www.caelum.com.br/" class="footer-link-caelum"><h3
 						class="footer-powered-by">Powered by</h3> <img
-					src="/assets/img/footer/caelum-logo.1462285507.svg" alt="Caelum"
+					src="${url}/assets/img/footer/caelum-logo.1462285507.svg" alt="Caelum"
 					class="footer-logo footer-caelumLogo"> </a>
 			</div>
 			<div class="footer-navegue">
@@ -677,15 +681,15 @@
 					<h2 class="footer-parceiros-titulo">Parceiros</h2>
 					<a class="footer-parceiros-galandra"
 						href="http://www.galandra.com.br/"> <img
-						src="/assets/img/footer/galandra-cinza-logo.1462285507.svg"
+						src="${url}/assets/img/footer/galandra-cinza-logo.1462285507.svg"
 						alt="Galandra" class="footer-parceiros-imagem">
 					</a> <a class="footer-parceiros-cdc"
 						href="http://www.casadocodigo.com.br/"> <img
-						src="/assets/img/footer/cdc-cinza-logo.1462285507.svg"
+						src="${url}/assets/img/footer/cdc-cinza-logo.1462285507.svg"
 						alt="Casa do Código" class="footer-parceiros-imagem">
 					</a>
 				</div>
-				<a class="footer-empresas" href="/contato-empresas"><div
+				<a class="footer-empresas" href="${url}/contato-empresas"><div
 						class="footer-empresas-info">
 						<h2 class="footer-empresas-titulo">Empresa?</h2>
 						<p class="footer-empresas-texto">Planos e vantagens para o seu
@@ -856,24 +860,24 @@
 			<ul class="grupoCaelum-list">
 				<li><a href="http://www.caelum.com.br"><img alt="Caelum"
 						class="grupoCaelum-Caelumlogo"
-						src="/assets/img/footer/caelum-logo.1462285507.svg"></a></li>
+						src="${url}/assets/img/footer/caelum-logo.1462285507.svg"></a></li>
 				<li><a href="http://www.alura.com.br"><img alt="Alura"
 						class="grupoCaelum-Aluralogo"
-						src="/assets/img/alura-logo.1462285507.svg"></a></li>
+						src="${url}/assets/img/alura-logo.1462285507.svg"></a></li>
 				<li><a href="http://www.casadocodigo.com.br"><img
 						class="grupoCaelum-CDClogo" alt="Casa do Código"
-						src="/assets/img/footer/cdc-logo.1462285507.svg"></a></li>
+						src="${url}/assets/img/footer/cdc-logo.1462285507.svg"></a></li>
 				<li><a href="http://www.guj.com.br"><img alt="GUJ"
 						class="grupoCaelum-GUJlogo"
-						src="/assets/img/footer/guj-logo.1462285507.svg"></a></li>
+						src="${url}/assets/img/footer/guj-logo.1462285507.svg"></a></li>
 			</ul>
 		</div>
 	</div>
-	<script src="/assets/js/lib/svg4everybody.min.1462285507.js" async></script>
-	<script src="/assets/js/header/menu.1462285507.js" async></script>
-	<script src="/assets/js/header/busca.1462285507.js" async></script>
-	<script src="/assets/js/detect.1462285507.js" async></script>
-	<script src="/assets/js/video.1462285507.js" async></script>
+	<script src="${url}/assets/js/lib/svg4everybody.min.1462285507.js" async></script>
+	<script src="${url}/assets/js/header/menu.1462285507.js" async></script>
+	<script src="${url}/assets/js/header/busca.1462285507.js" async></script>
+	<script src="${url}/assets/js/detect.1462285507.js" async></script>
+	<script src="${url}/assets/js/video.1462285507.js" async></script>
 	<script>
 		var userId = (document.cookie.match('alura.userId=([^;]+)') || [ null,
 				null ])[1];
@@ -902,8 +906,8 @@
 		ga('tracker1.send', 'pageview');
 	</script>
 	<script async src='//www.google-analytics.com/analytics.js'></script>
-	<script src="/bundle,lib/hunt.min,painelPlanos.1462285507.js" async></script>
-	<script src="/assets/js/footer/footer.1462285507.js" async></script>
+	<script src="${url}/bundle,lib/hunt.min,painelPlanos.1462285507.js" async></script>
+	<script src="${url}/assets/js/footer/footer.1462285507.js" async></script>
 	<script type="text/javascript"
 		src="https://static.criteo.net/js/ld/ld.js" async></script>
 	<script type="text/javascript">

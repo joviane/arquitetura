@@ -1,9 +1,15 @@
 package br.com.caelum.arquitetura.dto;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class SubCategoriaResponse {
+public class SubCategoriaResponse implements Serializable {
 
+    /**
+     * 
+     */
+    private static final long serialVersionUID = 1L;
+    
     private String slug;
     private String nome;
     
