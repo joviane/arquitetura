@@ -9,6 +9,6 @@
 <title></title>
 </head>
 <body>
-	Ocorreu um erro inesperado! -> ${exception.message}
+	Ocorreu um erro inesperado! ${exception.printStackTrace()}
 </body>
 </html>

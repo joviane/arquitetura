@@ -3,6 +3,7 @@ package br.com.caelum.arquitetura.client;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,11 +18,13 @@ public class CategoriasClient {
     @Autowired
     private RestTemplate restTemplate;
 
+    @Cacheable(value="categoria")
     public CategoriaResponse getCategoria(String nome){
 	String url = CATEGORIA_URL + nome;
 	return restTemplate.getForObject(url, CategoriaResponse.class);
     }
     
+    @Cacheable("categorias")
     @SuppressWarnings("unchecked")
     public List<CategoriaResponse> getCategorias(){
 	return restTemplate.getForObject(TODAS_AS_CATEGORIAS_URL, List.class);
